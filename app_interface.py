@@ -4,11 +4,20 @@ from logic import validate_login
 
 class LoginApp:
     '''
-    Docstring for LoginApp
+    Class responsible for managing the graphical login interface.
 
-        :param root: Description
+    Attributes:
+        root (tk.Tk): The main application window.
+        user_var (tk.StringVar): Control variable for the username field.
+        pass_var (tk.StringVar): Control variable for the password field.
     '''
     def __init__(self, root):
+        '''
+        Initializes the login interface and configures the widgets.
+
+        Args:
+            root (tk.Tk): Instance of the Tk interpreter.
+        '''
         self.root = root
         self.root.title('System Mars Landing')
         self.root.geometry('400x300')
@@ -21,9 +30,7 @@ class LoginApp:
 
     def create_widgets(self):
         '''
-        Docstring for create_widgets
-        
-        :param self: Description
+        It builds and positions visual elements in the window using Grid.
         '''
         # Usando Grid para melhor organização dos widgets
         tk.Label(self.root, text='User:').grid(row=0, 
@@ -46,6 +53,6 @@ class LoginApp:
         
         :param self: Description 
         '''
-        user = self.user_var.get()
+        username = self.user_var.get()
         password = self.pass_var.get()
-        validate_login(user=user, password=password)
+        validate_login(username=username, password=password)

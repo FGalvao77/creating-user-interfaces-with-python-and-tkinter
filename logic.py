@@ -1,11 +1,20 @@
-def validate_login(user, password) -> object:
+def validate_login(username, password) -> object:
     '''
-    Docstring for validate_login
-    
-    :param user: Description
-    :param password: Description
+    Checks if the provided credentials are valid.
+
+    Args:
+        username (str): The username entered in the form.
+        password (str): The password entered in the input field.
+
+    Returns:
+        bool: True if the credentials match the database,
+        False otherwise.
+
+    Example:
+        >>> validate_login('admin', '1234')
+        True
     '''
-    if user == 'admin' and password == '1234':
-        print(f'Login successful for: {user}')
+    if username == 'admin' and password == '1234':
+        print(f'Login successful for: {username}')
         return True
     return False
