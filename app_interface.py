@@ -10,8 +10,8 @@ class LoginApp:
     '''
     def __init__(self, root):
         self.root = root
-        self.root.title('System Mars Landing', font=('Arial', 16))
-        self.root.geometry('400x300', padx=20, pady=20)
+        self.root.title('System Mars Landing')
+        self.root.geometry('400x300')
 
         # Variáveis do Tkinter (boas práticas de sincronização) 
         self.user_var = tk.StringVar()
